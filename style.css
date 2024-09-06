@@ -198,6 +198,92 @@ nav{
     object-fit: cover;
     max-height: 300px;
 }
+@media (max-width: 768px) {
+    body {
+        padding-top: 56px; /* Sesuaikan padding top agar tidak menutupi konten */
+    }
+
+    /* Tumpuk kolom di bawah satu sama lain untuk layout program dan penyiar */
+    .col-md-4, .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .program-card, .penyiar-card {
+        margin-bottom: 20px;
+    }
+
+    /* Pastikan gambar penyiar tidak terlalu besar di mobile */
+    .penyiar-img {
+        max-height: 200px;
+    }
+
+    /* Sesuaikan tinggi banner pada mobile */
+    .container-fluid.banner {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    /* Kurangi ukuran font untuk teks besar */
+    .display-1, .display-6 {
+        font-size: 2.5rem;
+    }
+
+    .display-3 {
+        font-size: 2rem;
+    }
+
+    /* Album Prestasi responsif */
+    .album-prestasi {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    /* Perkecil ukuran kontak di mobile */
+    .kontak {
+        padding-bottom: 10%;
+        padding-top: 10%;
+    }
+}
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+}
+
+.penyiar-img {
+    max-height: 200px; /* Sesuaikan maksimal tinggi gambar penyiar di mobile */
+}
+.banner {
+    padding-top: 50px;
+    padding-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding-top: 20px;
+        padding-bottom: 20%;
+    }
+}
+.album-prestasi {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Pastikan grid lebih fleksibel */
+}
+
+.album-prestasi .prestasi-item {
+    border-radius: 10px;
+    overflow: hidden;
+}
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 150px; /* Sesuaikan ukuran logo di mobile */
+    }
+}
+.penyiar-card {
+    width: 100%;
+    max-width: 250px; /* Batasi lebar kartu di layar kecil */
+    text-align: center;
+    margin: 0 auto;
+}
+
 
 
 
